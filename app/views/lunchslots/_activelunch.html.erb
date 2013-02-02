@@ -1,0 +1,26 @@
+When are you next free for lunch?
+
+<%= form_for :lunchslot, :url => { :action => "addactiveslot" } do |f| %>
+
+Day:
+<%= f.select(:day, options_for_select(@day_array)) %>
+<br />
+From:
+<%= f.select(:start_hour, options_for_select(@hours_array)) %>
+<%= f.select(:start_minutes, options_for_select(@minutes_array)) %>
+<br />
+To:
+<%= f.select(:end_hour, options_for_select(@hours_array)) %>
+<%= f.select(:end_minutes, options_for_select(@minutes_array)) %>
+
+<br />
+<br />
+<%= f.submit 'Go', :class => "btn" %>
+<% end %>
+
+
+<br />
+<br />
+<br />
+<br />
+<a href="#">Or, set your complete schedule for the week -> </a>

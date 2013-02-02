@@ -1,6 +1,14 @@
 Lunchmatch::Application.routes.draw do
 
-  root to: 'static_pages#home'
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
+
+  resources :lunchslots
+
+  root to: 'lunchslots#home'
+  
+  match '/addactiveslot', to: 'lunchslots#addactiveslot'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

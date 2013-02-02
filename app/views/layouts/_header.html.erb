@@ -1,0 +1,17 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">LunchMatch</a>
+
+
+    <% if current_user %>
+	    <div class="navlinks">
+		    <ul class="nav pull-right">
+		      <li><img id="headerprofilepic" src=<%= current_user.image %>></img></li>
+		      <li><%= link_to(current_user.name, '#') %></li>
+		      <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+		    </ul>
+		</div>
+   <% end %>
+
+  </div>
+</div>

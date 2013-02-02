@@ -34,6 +34,10 @@ gem 'jquery-rails'
 
 #Custom-added gems
 gem 'bootstrap-sass', '~> 2.2.2.0'
+gem 'devise'
+
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

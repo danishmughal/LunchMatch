@@ -1,0 +1,2 @@
+module LunchslotsHelper
+end
